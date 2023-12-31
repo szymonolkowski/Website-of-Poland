@@ -1,0 +1,18 @@
+#504B4B - txt
+#f2f3f3 - bg
+#fff - Main Fields
+
+
+index:
+(wprowadzenie itd.)
+me:
+(- o mnie (ja))
+pns:
+(- flaga, godło (also bandera wojenna) - hymn)
+geography:
+(- geografia - podział administracyjny - stolica + większe miasta )
+authority:
+( - władza )
+
+dodatki:
+- stopka ma mieć autora
