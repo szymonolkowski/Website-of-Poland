@@ -16,3 +16,4 @@ authority:
 
 dodatki:
 - stopka ma mieć autora
+- gdy najedzie się na iconke navbara to pojawi się napis i w nim tutuł i on będzie podążał za kursorem tak długo jak kursor będzie na tej ikonce

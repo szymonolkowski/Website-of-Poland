@@ -13,7 +13,7 @@
 
 #navbar {
 	width: 60vw;
-	font-size: 1vw;
+	font-size: 2vw;
 }
 
 #navbar ul {
@@ -26,9 +26,20 @@
 
 #navbar ul li {
 	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #navbar ul a {
 	text-decoration: none;
 	color: #504B4B;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-icons {
+	filter: invert(23%) sepia(77%) saturate(26%) hue-rotate(328deg) brightness(96%) contrast(84%);
+	width: 2vw;
 }
