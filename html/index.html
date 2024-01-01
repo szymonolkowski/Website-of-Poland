@@ -22,39 +22,60 @@
 		/>
 		<link rel="stylesheet" href="../css/nav.css" />
 		<link rel="stylesheet" href="../css/main.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Baloo+2:400,800&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- !JS & Script Section -->
-		<script
-			src="https://kit.fontawesome.com/bc9f46da8d.js"
-			crossorigin="anonymous"
-		></script>
 	</head>
 	<body>
+		<p id="info-navbar">
+			<span id="inside-info-navbar">Polskie Symbole Narodowe</span>
+		</p>
 		<header id="navbar-container">
 			<nav id="navbar">
 				<ul>
-					<li>
+					<li id="home-li">
 						<a href="index.html"
-							><i class="fa-solid fa-house"></i
-						></a>
+							><img
+								id="home-icon"
+								class="navbar-icons"
+								src="../img/hmicon.svg"
+						/></a>
 					</li>
-					<li>
+					<li id="pns-li">
 						<a href="pns.html"
-							><img class="navbar-icons" src="../img/psnicon.svg"
+							><img
+								id="pns-icon"
+								class="navbar-icons"
+								src="../img/psnicon.svg"
 						/></a>
 					</li>
-					<li>
+					<li id="geo-li">
 						<a href="geography.html"
-							><img class="navbar-icons" src="../img/geographyicon.svg"
+							><img
+								id="geo-icon"
+								class="navbar-icons"
+								src="../img/geoicon.svg"
 						/></a>
 					</li>
-					<li>
+					<li id="law-li">
 						<a href="authority.html"
-							><i class="fa-solid fa-section"></i
-						></a>
+							><img
+								id="law-icon"
+								class="navbar-icons"
+								src="../img/lawicon.svg"
+						/></a>
 					</li>
-					<li>
-						<a href="me.html"><i class="fa-regular fa-user"></i></a>
+					<li id="me-li">
+						<a href="me.html"
+							><img
+								id="me-icon"
+								class="navbar-icons"
+								src="../img/meicon.svg"
+						/></a>
 					</li>
+					<img class="indicator" src="../img/indicator.svg" />
 				</ul>
 			</nav>
 		</header>
