@@ -38,8 +38,11 @@
 	overflow: hidden;
 }
 
-#navbar ul li {
+#navbar ul a {
 	width: 15%;
+}
+
+#navbar ul li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -61,6 +64,7 @@
 		brightness(96%) contrast(84%);
 	height: 2.5vw;
 	transition: 0.2s;
+	pointer-events: none;
 }
 
 .indicator {
@@ -101,9 +105,14 @@
 	left: 23vw;
 }
 
+/* There is a problem that lead to cursor not touching element and hover then doesn't do shit and its a indicator fucking problem*/
+
 #inside-info-navbar {
 	display:block; 
 	rotate: 180deg;
+	font-size-adjust: none;
+	font-size: 0.9vw;
+	pointer-events: none;
 }
 
 #info-navbar::after {
@@ -125,18 +134,6 @@
 	}
 }
 
-
-/* #info-navbar {
-	width: 20vw;
-	height: 5vw;
-	background-color: white;
-	box-shadow: 0px 0px 57px -3px rgba(66, 68, 90, 0.19);
-	border-radius: 1.2vw;
-	position: absolute;
-	top: 10vw;
-	left: 10vw;
-} */
-
 body p#info-navbar {
 	transform: translatey(0);
 	animation: float 5s ease-in-out infinite;
@@ -150,21 +147,26 @@ body p#info-navbar {
 	padding: 2.5vw;
 	border-radius: 1.2vw;
 	position: relative;
-	box-shadow: -1.4vw 1.4vw rgba(66, 68, 90, 0.19);
+	/* box-shadow: -1.4vw 1.5vw rgba(66, 68, 90, 0.19); */
+	box-shadow: -0.7vw 0.85vw rgba(66, 68, 90, 0.19);
 	font-family: "Baloo 2", cursive;
 	width: 10vw;
 	height: 2vw;
-	top: 10vw;
-	left: 10vw;
 	rotate: 180deg;
+	z-index: 9999;
+	opacity: 0;
+	transition: opacity 0.2s;
+	pointer-events: none;
 }
 body p#info-navbar:after {
 	transform: translatey(0px);
 	animation: float2 5s ease-in-out infinite;
+	content: attr(data-before);
 	content: ".";
 	font-weight: bold;
 	fill: #dc4d4e;
-	text-shadow: -1.5vw 1.5vw rgba(66, 68, 90, 0.19);
+	/* text-shadow: -1.5vw 1.5vw rgba(66, 68, 90, 0.19); */
+	text-shadow: -0.75vw 0.85vw rgba(66, 68, 90, 0.19);
 	text-align: left;
 	font-size: 3.7vw;
 	width: 3.7vw;
@@ -174,10 +176,11 @@ body p#info-navbar:after {
 	background-color: #dc4d4e;
 	position: absolute;
 	display: block;
-	bottom: -2vw;
+	bottom: -2.2vw;
 	left: 0;
-	box-shadow: -1.5vw 1.5vw rgba(66, 68, 90, 0.19);
-	z-index: -2;
+	/* box-shadow: -1.5vw 1.5vw rgba(66, 68, 90, 0.19); */
+	box-shadow: -0.75vw 0.85vw rgba(66, 68, 90, 0.19);
+	z-index: -3;
 }
 
 @keyframes float {
@@ -185,7 +188,7 @@ body p#info-navbar:after {
 		transform: translatey(0vw);
 	}
 	50% {
-		transform: translatey(-1.4vw);
+		transform: translatey(-0.4vw);
 	}
 	100% {
 		transform: translatey(0vw);
@@ -198,7 +201,7 @@ body p#info-navbar:after {
 		transform: translatey(0vw);
 	}
 	55% {
-		transform: translatey(-1.4vw);
+		transform: translatey(-0.4vw);
 	}
 	60% {
 		line-height: 0.67vw;

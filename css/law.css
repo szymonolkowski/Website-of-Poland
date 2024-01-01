@@ -1,0 +1,12 @@
+.indicator {
+	position: absolute;
+	left: 17vw;
+	bottom: 0;
+	filter: invert(51%) sepia(76%) saturate(466%) hue-rotate(128deg)
+		brightness(97%) contrast(83%);
+	transition: 0.6s;
+	width: 8vw;
+	height: 3.7vw;
+	mix-blend-mode: saturation;
+	pointer-events: none;
+}
