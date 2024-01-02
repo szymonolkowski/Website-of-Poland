@@ -12,14 +12,16 @@
 	font-size: 1vw;
 	font-family: "Roboto", sans-serif;
 	font-weight: 900;
+	z-index: 99;
 }
 
 #navbar {
 	height: 4vw;
-	width: 50vw;
+	width: 52.35vw;
 	font-size: 2vw;
 	display: flex;
 	align-items: center;
+	animation: nav-slide-in 0.8s;
 }
 
 #navbar ul {
@@ -36,6 +38,7 @@
 	box-shadow: 0px 0px 57px -3px rgba(66, 68, 90, 0.19);
 	position: relative;
 	overflow: hidden;
+	animation: float_navbar 5s ease-in-out infinite;
 }
 
 #navbar ul a {
@@ -105,6 +108,26 @@
 	left: 23vw;
 }
 
+#home-li {
+	animation: nav-slide-in 1.4s;
+}
+
+#pns-li {
+	animation: nav-slide-in 1.8s;
+}
+
+#geo-li {
+	animation: nav-slide-in 2.2s;
+}
+
+#law-li {
+	animation: nav-slide-in 2.6s;
+}
+
+#me-li {
+	animation: nav-slide-in 3s;
+}
+
 /* There is a problem that lead to cursor not touching element and hover then doesn't do shit and its a indicator fucking problem*/
 
 #inside-info-navbar {
@@ -148,7 +171,8 @@ body p#info-navbar {
 	border-radius: 1.2vw;
 	position: relative;
 	/* box-shadow: -1.4vw 1.5vw rgba(66, 68, 90, 0.19); */
-	box-shadow: -0.7vw 0.85vw rgba(66, 68, 90, 0.19);
+	box-shadow: -0.7vw 0.85vw rgba(66, 68, 90, 0.19),
+				inset 0px 0px 10px -3px rgba(66, 68, 90, 0.19);
 	font-family: "Baloo 2", cursive;
 	width: 10vw;
 	height: 2vw;
@@ -185,155 +209,184 @@ body p#info-navbar:after {
 }
 
 body p#info-navbar.show {
-    animation: showin 0.5s ease-out forwards, float 5s ease-in-out infinite;
-    transform-origin: left center;
+	animation: showin 0.5s ease-out forwards, float 5s ease-in-out infinite;
+	transform-origin: left center;
 }
 
 body p#info-navbar.show:after {
-    animation: showin-after 1s ease-out forwards, float2 5s ease-in-out infinite, showin-after-content 0.6s ease-out forwards;
+	animation: showin-after 1s ease-out forwards, float2 5s ease-in-out infinite,
+		showin-after-content 0.6s ease-out forwards;
 }
 
 @keyframes showin {
-    0% {
-        opacity: 0;
+	0% {
+		display: block;
+		opacity: 0;
 		translate: -20vw;
-    }
-    100% {
-        opacity: 1;
+	}
+	100% {
+		opacity: 1;
 		translate: 0;
-    }
+	}
 }
 
 @keyframes showin-after {
-    0% {
-        opacity: 0;
-        translate: 10vw;
-    }
-
-	50% {
-        translate: -2vw;
+	0% {
+		opacity: 0;
+		translate: 10vw;
 	}
 
-    100% {
-        opacity: 1;
-        translate: 0;
-    }
+	50% {
+		translate: -2vw;
+	}
+
+	100% {
+		opacity: 1;
+		translate: 0;
+	}
 }
 
 @keyframes showin-after-content {
 	0% {
-		text-indent: 10vw; 
-	}
-	
-	50% {
-        text-indent: -3vw; 
+		text-indent: 10vw;
 	}
 
-    100% {
-		text-indent: 0; 
-    }
+	50% {
+		text-indent: -3vw;
+	}
+
+	100% {
+		text-indent: 0;
+	}
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-0.9vw);
-    }
-    100% {
-        transform: translateY(0);
-    }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-0.9vw);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes float_navbar {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-0.1vw);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes float2 {
-    0% {
-        line-height: 2vw;
-        transform: translateY(0);
-    }
-    55% {
-        transform: translateY(-0.9vw);
-    }
-    60% {
-        line-height: 0.67vw;
-    }
-    100% {
-        line-height: 2vw;
-        transform: translateY(0);
-    }
+	0% {
+		line-height: 2vw;
+		transform: translateY(0);
+	}
+	55% {
+		transform: translateY(-0.9vw);
+	}
+	60% {
+		line-height: 0.67vw;
+	}
+	100% {
+		line-height: 2vw;
+		transform: translateY(0);
+	}
 }
 
 body p#info-navbar.hide {
-    animation: hide 0.5s ease-in-out forwards, reverse-float 5s ease-in-out infinite;
-    transform-origin: left center;
+	animation: hide 0.5s ease-in-out forwards,
+		reverse-float 5s ease-in-out infinite;
+	transform-origin: left center;
 }
 
 body p#info-navbar.hide:after {
-    animation: hide-after 1s ease-in-out forwards, reverse-float2 5s ease-in-out infinite, hide-after-content 0.6s ease-in-out forwards;
+	animation: hide-after 1s ease-in-out forwards,
+		reverse-float2 5s ease-in-out infinite,
+		hide-after-content 0.6s ease-in-out forwards;
 }
 
 @keyframes hide {
-    0% {
-        opacity: 1;
-        translate: 0;
-    }
-    100% {
-        opacity: 0;
-        translate: 20vw;
-    }
+	0% {
+		opacity: 1;
+		translate: 0;
+	}
+	100% {
+		opacity: 0;
+		translate: 20vw;
+		display: none;
+	}
 }
 
 @keyframes hide-after {
-    0% {
-        opacity: 1;
-        translate: 0;
-    }
+	0% {
+		opacity: 1;
+		translate: 0;
+	}
 
-    100% {
-        opacity: 0;
-        translate: -20vw;
-    }
+	100% {
+		opacity: 0;
+		translate: -20vw;
+	}
 }
 
 @keyframes hide-after-content {
-    0% {
-        text-indent: 0;
-    }
+	0% {
+		text-indent: 0;
+	}
 
-    50% {
-        text-indent: -3vw;
-    }
+	50% {
+		text-indent: -3vw;
+	}
 
-    100% {
-        text-indent: 10vw;
-    }
+	100% {
+		text-indent: 10vw;
+	}
 }
 
 @keyframes reverse-float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-0.9vw);
-    }
-    100% {
-        transform: translateY(0);
-    }
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-0.9vw);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes reverse-float2 {
-    0% {
-        line-height: 2vw;
-        transform: translateY(0);
-    }
-    55% {
-        transform: translateY(-0.9vw);
-    }
-    60% {
-        line-height: 0.67vw;
-    }
-    100% {
-        line-height: 2vw;
-        transform: translateY(0);
-    }
+	0% {
+		line-height: 2vw;
+		transform: translateY(0);
+	}
+	55% {
+		transform: translateY(-0.9vw);
+	}
+	60% {
+		line-height: 0.67vw;
+	}
+	100% {
+		line-height: 2vw;
+		transform: translateY(0);
+	}
 }
+
+@keyframes nav-slide-in {
+	0% {
+		transform: translateY(-10vw);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+

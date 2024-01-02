@@ -15,7 +15,7 @@ document.addEventListener("mousemove", function (e) {
 		((mouseX /* - follower.offsetWidth */) / window.innerWidth) * 100 -
 		0.9 +
 		"vw";
-	follower.style.top = (mouseY / window.innerHeight) * 100 + 6 + "vh";
+	follower.style.top = ((window.scrollY + mouseY) / window.innerHeight) * 100 + 6 + "vh";
 });
 
 nav_ele_a.forEach((e) => {
