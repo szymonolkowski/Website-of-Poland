@@ -165,14 +165,14 @@ body p#info-navbar {
 	font-weight: bold;
 	letter-spacing: 0.15vw;
 	font-size: 0.9vw;
-	color: #504b4b;
+	color: black;
 	background-color: white;
 	padding: 2.5vw;
 	border-radius: 1.2vw;
 	position: relative;
 	/* box-shadow: -1.4vw 1.5vw rgba(66, 68, 90, 0.19); */
 	box-shadow: -0.7vw 0.85vw rgba(66, 68, 90, 0.19),
-				inset 0px 0px 10px -3px rgba(66, 68, 90, 0.19);
+		inset 0px 0px 10px -3px rgba(66, 68, 90, 0.19);
 	font-family: "Baloo 2", cursive;
 	width: 10vw;
 	height: 2vw;
@@ -388,5 +388,3 @@ body p#info-navbar.hide:after {
 		transform: translateY(0);
 	}
 }
-
-

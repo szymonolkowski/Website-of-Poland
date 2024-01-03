@@ -12,10 +12,11 @@ document.addEventListener("mousemove", function (e) {
 
 	// Use vw units for positioning
 	follower.style.left =
-		((mouseX /* - follower.offsetWidth */) / window.innerWidth) * 100 -
+		(mouseX /* - follower.offsetWidth */ / window.innerWidth) * 100 -
 		0.9 +
 		"vw";
-	follower.style.top = ((window.scrollY + mouseY) / window.innerHeight) * 100 + 6 + "vh";
+	follower.style.top =
+		((window.scrollY + mouseY) / window.innerHeight) * 100 + 6 + "vh";
 });
 
 nav_ele_a.forEach((e) => {
@@ -38,7 +39,6 @@ nav_ele_a.forEach((e) => {
 		}
 		info_bubble.classList.remove("hide");
 		info_bubble.classList.add("show"); // Add a class to trigger animation
-
 	});
 	navbar.addEventListener("mouseout", (e) => {
 		info_bubble.classList.remove("show"); // Remove the class to hide the animation

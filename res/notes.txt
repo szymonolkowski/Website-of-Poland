@@ -2,6 +2,12 @@
 #f2f3f3 - bg
 #fff - Main Fields
 
+Additional colors:
+- 7ED7C1
+- F0DBAF
+- DC8686
+- B06161
+
 
 index:
 (wprowadzenie itd.)
