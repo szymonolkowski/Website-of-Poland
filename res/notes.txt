@@ -1,6 +1,8 @@
 #504B4B - txt
 #f2f3f3 - bg
 #fff - Main Fields
+#DC4C4C -sec
+#4DDBA7 - acc
 
 Additional colors:
 - 7ED7C1

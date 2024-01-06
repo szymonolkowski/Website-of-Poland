@@ -21,7 +21,7 @@ document.addEventListener("mousemove", function (e) {
 nav_ele_a.forEach((e) => {
 	let navbar = document.querySelector("#navbar ul");
 	navbar.addEventListener("mouseover", (e) => {
-		let id_of_li = e.target.id;
+/* 		let id_of_li = e.target.id;
 		let dashIndex = id_of_li.indexOf("-");
 		let resultString =
 			dashIndex !== -1 ? id_of_li.substring(0, dashIndex) : id_of_li;
@@ -35,7 +35,7 @@ nav_ele_a.forEach((e) => {
 			info_bubble_text.innerHTML = "Władza w Polsce";
 		} else if (resultString == "me") {
 			info_bubble_text.innerHTML = "O mnie";
-		}
+		} */
 		info_bubble.classList.remove("hide");
 		info_bubble.classList.add("show"); 
 	});
@@ -44,3 +44,8 @@ nav_ele_a.forEach((e) => {
 		info_bubble.classList.add("hide");
 	});
 });
+
+
+function change_text(text) {  
+	info_bubble_text.innerHTML = text;
+}
