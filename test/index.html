@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+	<div id="container">
+		<span id="text1"></span>
+		<span id="text2"></span>
+	</div>
+	<div class="t" id="n" onmouseover="morphing()">sg</div>
+	<div class="t" id="a">psn</div>
+	<div class="t" id="v">gmp</div>
+	<div class="t" id="c">wp</div>
+
+	<svg id="filters">
+		<defs>
+			<filter id="threshold">
+				<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+										0 1 0 0 0
+										0 0 1 0 0
+										0 0 0 255 -140" />
+			</filter>
+		</defs>
+	</svg>
+	<script src="main.js"></script>
+</body>
+</html>

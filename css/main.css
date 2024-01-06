@@ -75,7 +75,7 @@ hr {
 		"aside-down aside-down main main main main"
 		"aside-down aside-down main main main main";
 	gap: 3vw;
-	width: 70vw;
+	width: 1700px;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -89,7 +89,7 @@ hr {
 	display: grid;
 	grid-template-areas: "fl fl fl fl fa fa";
 	gap: 3vw;
-	width: 70vw;
+	width: 1700px;
 	position: absolute;
 	left: 0;
 	right: 0;

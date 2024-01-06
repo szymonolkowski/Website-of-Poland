@@ -10,9 +10,8 @@ document.addEventListener("mousemove", function (e) {
 
 	let follower = info_bubble;
 
-	// Use vw units for positioning
 	follower.style.left =
-		(mouseX /* - follower.offsetWidth */ / window.innerWidth) * 100 -
+		(mouseX / window.innerWidth) * 100 -
 		0.9 +
 		"vw";
 	follower.style.top =
@@ -38,10 +37,10 @@ nav_ele_a.forEach((e) => {
 			info_bubble_text.innerHTML = "O mnie";
 		}
 		info_bubble.classList.remove("hide");
-		info_bubble.classList.add("show"); // Add a class to trigger animation
+		info_bubble.classList.add("show"); 
 	});
 	navbar.addEventListener("mouseout", (e) => {
-		info_bubble.classList.remove("show"); // Remove the class to hide the animation
+		info_bubble.classList.remove("show"); 
 		info_bubble.classList.add("hide");
 	});
 });
